@@ -3,7 +3,7 @@ class Users::SessionsController < Devise::SessionsController
 
   private
 
-  def respond_with(resource, _opts = {})
+  def respond_with(_resource, _opts = {})
     render json: { message: 'Greate! Now you are logged in.', logged?: true }, status: :ok
   end
 
@@ -14,10 +14,10 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def log_out_success
-    render json: { message: "You are logged out. See you soon!", logged?: false }, status: :ok
+    render json: { message: 'You are logged out. See you soon!', logged?: false }, status: :ok
   end
 
   def log_out_failure
-    render json: { message: "Oops! nothing happened. Try to login again!", logged?: false }, status: :unauthorized
+    render json: { message: 'Oops! nothing happened. Try to login again!', logged?: false }, status: :unauthorized
   end
 end
