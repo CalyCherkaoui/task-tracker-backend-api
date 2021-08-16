@@ -122,30 +122,41 @@ The main dependencies used in this web application:
     <td></td>
   </tr>
   <tr>
-  <td>database_cleaner</td>
+    <td>database_cleaner</td>
     <td>Strategies for cleaning databases in testing</td>
     <td></td>
     <td>⭐️</td>
     <td></td>
   </tr>
-  <td>faker</td>
+  <tr>
+    <td>faker</td>
     <td>Generates fake data for testing</td>
     <td></td>
     <td>⭐️</td>
     <td></td>
   </tr>
-  <td>bcrypt</td>
+  <tr>
+    <td>bcrypt</td>
     <td>A secure hash algorithm for hashing passwords</td>
     <td>⭐️</td>
     <td></td>
     <td></td>
   </tr>
-    <td>jwt</td>
-    <td>Ruby implementation of the RFC 7519 OAuth JSON Web Token standard</td>
+  <tr>
+    <td>devise</td>
+    <td>Flexible authentication solution for Rails based on Warden</td>
     <td>⭐️</td>
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td>devise-jwt</td>
+    <td>Implementation of the RFC 7519 OAuth JSON Web Token standard</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <td>rack-cors</td>
     <td>Support for Cross-Origin Resource Sharing for Rack compatible web apps</td>
     <td>⭐️</td>
