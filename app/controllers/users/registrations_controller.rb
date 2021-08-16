@@ -14,6 +14,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def register_failed
-    render json: { message: "Opps! Something went wrong. Try to signup again.", logged?: false }
+    render json: { message: 'Opps! Something went wrong. Try to signup again.', logged?: false }
   end
 end
