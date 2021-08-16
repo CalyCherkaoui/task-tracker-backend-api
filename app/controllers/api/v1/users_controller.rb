@@ -4,7 +4,7 @@ module Api
       before_action :authenticate_user!
     
       def show
-        render json: { message: "Yeppa you did it", email: @user.email }
+        render json: { message: "Yeppa you did it", username: @user.username, email: @user.email }
       end
 
       private
