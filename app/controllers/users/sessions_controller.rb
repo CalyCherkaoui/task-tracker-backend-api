@@ -4,7 +4,10 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def respond_with(_resource, _opts = {})
-    render json: { message: 'Greate! Now you are logged in.', logged?: true, username: current_user.username, email: current_user.email }, status: :ok
+    render json: { message: 'Greate! Now you are logged in.',
+                   logged?: true, username: current_user.username,
+                   email: current_user.email },
+           status: :ok
   end
 
   def respond_to_on_destroy
@@ -14,7 +17,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def log_out_success
-    render json: { message: 'You are logged out. See you soon!', logged?: false}, status: :ok
+    render json: { message: 'You are logged out. See you soon!', logged?: false }, status: :ok
   end
 
   def log_out_failure
