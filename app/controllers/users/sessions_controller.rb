@@ -1,5 +1,4 @@
 class Users::SessionsController < Devise::SessionsController
-
   private
 
   def respond_with(resource, _opts = {})
@@ -33,7 +32,7 @@ class Users::SessionsController < Devise::SessionsController
         [
           { message: 'Oops! nothing happened. Try to logout again!.' }
         ],
-      title:  'Log-out failure'
+      title: 'Log-out failure'
     }
   end
 
@@ -43,7 +42,7 @@ class Users::SessionsController < Devise::SessionsController
         [
           { message: 'You are logged out. See you soon!' }
         ],
-      title:  'Successfuly logged out'
+      title: 'Successfuly logged out'
     }
   end
 end
