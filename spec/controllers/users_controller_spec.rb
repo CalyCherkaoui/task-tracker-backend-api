@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable C: Metrics/BlockLength
 RSpec.describe 'Users', type: :request do
   let(:user) { create_user }
   let(:existing_user) { create_user }

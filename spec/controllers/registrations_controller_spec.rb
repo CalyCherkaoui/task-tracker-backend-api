@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Registrations', type: :request do
   let(:user) { build_user }
   let(:existing_user) { create_user }

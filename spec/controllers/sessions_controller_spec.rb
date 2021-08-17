@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Sessions', type: :request do
   let(:user) { create_user }
   let(:login_url) { '/api/v1/login' }
