@@ -1,19 +1,26 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  respond_to :json
+  def create
+    build_resource(sign_up_params)
+    resource.save
+    sign_up(resource_name, resource) if resource.persisted?
 
-  private
-
-  def respond_with(_resource, _opts = {})
-    register_success && return if resource.persisted?
-
-    register_failed
+    render_jsonapi_response(resource)
   end
+  # respond_to :json
 
-  def register_success
-    render json: { message: 'Amazing! You have signed up sucessfully.', logged?: false }
-  end
+  # private
 
-  def register_failed
-    render json: { message: 'Opps! Something went wrong. Try to signup again.', logged?: false }
-  end
+  # def respond_with(_resource, _opts = {})
+  #   register_success && return if resource.persisted?
+
+  #   register_failed
+  # end
+
+  # def register_success
+  #   render json: { message: 'Amazing! You have signed up sucessfully.', logged?: false }
+  # end
+
+  # def register_failed
+  #   render json: { message: 'Opps! Something went wrong. Try to signup again.', logged?: false }
+  # end
 end
