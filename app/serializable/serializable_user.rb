@@ -8,10 +8,10 @@ class SerializableUser < JSONAPI::Serializable::Resource
   end
 
   link :self do
-    @url_helpers.api_v1_user_url(@object.id)
+    @url_helpers.api_v1_user_path(@object.id)
   end
 
   meta do
-    { apiversion: '1.0' }
+    { admin: false }
   end
 end
