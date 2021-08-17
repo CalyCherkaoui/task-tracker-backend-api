@@ -106,6 +106,9 @@ GEM
       jsonapi-deserializable (~> 0.2.0)
       jsonapi-serializable (~> 0.3.0)
     jsonapi-renderer (0.2.2)
+    jsonapi-rspec (0.0.11)
+      rspec-core
+      rspec-expectations
     jsonapi-serializable (0.3.1)
       jsonapi-renderer (~> 0.2.0)
     jwt (2.2.3)
@@ -242,6 +245,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   jsonapi-rails
+  jsonapi-rspec
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
