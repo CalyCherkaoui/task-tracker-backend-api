@@ -1,10 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'RegistrationsController', type: :request do
-
-  let (:user) { build_user }
-  let (:existing_user) { create_user }
-  let (:signup_url) { '/api/v1/signup' }
+  let(:user) { build_user }
+  let(:existing_user) { create_user }
+  let(:signup_url) { '/api/v1/signup' }
 
   context 'When registrating a new user' do
     before do
@@ -45,5 +44,4 @@ RSpec.describe 'RegistrationsController', type: :request do
       expect(response.status).to eq(400)
     end
   end
-
 end

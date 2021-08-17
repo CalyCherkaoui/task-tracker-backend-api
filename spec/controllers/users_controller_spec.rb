@@ -1,15 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'UsersController', type: :request do
-
-  let (:user) { create_user }
-  let (:existing_user) { create_user }
+  let(:user) { create_user }
+  let(:existing_user) { create_user }
 
   context 'When searching for a user' do
     before do
       login_with_api(user)
       get "/api/v1/users/#{user.id}", headers: {
-        'Authorization': response.headers['Authorization']
+        Authorization: response.headers['Authorization']
       }
     end
 
@@ -27,7 +26,7 @@ RSpec.describe 'UsersController', type: :request do
     before do
       login_with_api(user)
       get "/api/v1/users/#{existing_user.id}", headers: {
-        'Authorization': response.headers['Authorization']
+        Authorization: response.headers['Authorization']
       }
     end
 
@@ -45,5 +44,4 @@ RSpec.describe 'UsersController', type: :request do
       expect(response.status).to eq(401)
     end
   end
-
 end

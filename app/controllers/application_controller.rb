@@ -33,13 +33,13 @@ class ApplicationController < ActionController::API
             title: 'Not_authorised_user',
             status: 401
           }
-        ],
+        ]
     }, status: 401
   end
 
   def record_invalid
     render json: {
-      'errors': [
+      errors: [
         {
           message: 'Oops! something went wrong!',
           status: '400',
@@ -48,7 +48,6 @@ class ApplicationController < ActionController::API
       ]
     }, status: 400
   end
-
 
   protected
 
