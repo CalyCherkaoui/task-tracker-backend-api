@@ -1,5 +1,4 @@
 module ApiHelpers
-
   def json
     JSON.parse(response.body)
   end
@@ -13,5 +12,4 @@ module ApiHelpers
       }
     }
   end
-
 end
