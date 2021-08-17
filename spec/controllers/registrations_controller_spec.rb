@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
+# rubocop:disable Metrics/BlockLength, Lint/RedundantCopDisableDirective
 RSpec.describe 'Registrations', type: :request do
   let(:user) { build_user }
   let(:existing_user) { create_user }
@@ -46,4 +46,4 @@ RSpec.describe 'Registrations', type: :request do
     end
   end
 end
-# rubocop:enable
+# rubocop:enable Metrics/BlockLength, Lint/RedundantCopDisableDirective

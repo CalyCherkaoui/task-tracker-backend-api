@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
+# rubocop:disable Metrics/BlockLength, Lint/RedundantCopDisableDirective
 RSpec.describe 'Sessions', type: :request do
   let(:user) { create_user }
   let(:login_url) { '/api/v1/login' }
@@ -48,4 +48,4 @@ RSpec.describe 'Sessions', type: :request do
     end
   end
 end
-# rubocop:enable
+# rubocop:enable Metrics/BlockLength, Lint/RedundantCopDisableDirective
