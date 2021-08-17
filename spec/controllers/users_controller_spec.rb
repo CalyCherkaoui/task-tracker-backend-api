@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'UsersController', type: :request do
+RSpec.describe 'Users', type: :request do
   let(:user) { create_user }
   let(:existing_user) { create_user }
 
