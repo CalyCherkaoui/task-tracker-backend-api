@@ -19,7 +19,7 @@ class SerializableTask < JSONAPI::Serializable::Resource
     link :related do
       "/api/v1/users/#{@object.user.id}"
     end
-    meta do
+    data do
       {
         created_by: @object.user.name
       }
@@ -30,7 +30,7 @@ class SerializableTask < JSONAPI::Serializable::Resource
     link :related do
       "/api/v1/routine/#{@object.routine.id}"
     end
-    meta do
+    data do
       {
         routine: @object.routine.name,
         routine_id: @object.routine.id

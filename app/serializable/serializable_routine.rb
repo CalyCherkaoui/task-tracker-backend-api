@@ -3,16 +3,18 @@ class SerializableRoutine < JSONAPI::Serializable::Resource
 
   attributes :id, :name, :icon, :priority
 
-  attribute :ordered_tasks do
-    @object.ordered_tasks
-  end
-
-  attribute :hero_task do
-    @object.hero_task
-  end
-
   attribute :tasks_count do
     @object.tasks_count
+  end
+
+  has_many :tasks do
+    data do
+      @object.ordered_tasks
+    end
+
+    hero_task do
+      @object.hero_task
+    end
   end
 
   link :self do
