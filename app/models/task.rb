@@ -5,7 +5,7 @@ class Task < ApplicationRecord
   validates :unit, :goal, presence: true
   validates :priority, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
-  scope :priority_sorted, -> { order(priority: :asc).include(:routine) }
+  scope :priority_sorted, -> { order(priority: :asc).includes(:routine) }
 
   def icon
     routine.icon

@@ -7,4 +7,8 @@ class User < ApplicationRecord
          jwt_revocation_strategy: JwtDenylist
 
   has_many :tasks
+
+  def sorted_tasks
+    tasks.priority_sorted
+  end
 end
