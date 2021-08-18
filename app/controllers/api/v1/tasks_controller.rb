@@ -6,12 +6,16 @@ module Api
 
       # GET /tasks/:id
       def show
-        render_jsonapi_response(@task)
+        # render_jsonapi_response(@task)
+        render jsonapi: @task, include: %i[users routines],
+               status: 200
       end
 
       # GET /tasks
       def index
-        render jsonapi: Task.all # includes last measurement
+        render jsonapi: Task.priority_sorted, include: :routines,
+               status: 200
+        # includes last measurement
       end
 
       # PUT /tasks/:id
@@ -24,6 +28,10 @@ module Api
       def create
         task = current_user.tasks.create(task_params)
         if task.save
+          # render jsonapi: task,
+          #  include: [:user, :routine],
+          #  fields: { users: [:username, :id], routines: [ :name, :id] },
+          #  status: :created
           render_jsonapi_response(task)
         else
           render json: task.errors,
