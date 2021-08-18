@@ -8,6 +8,6 @@ class SerializableRoutine < JSONAPI::Serializable::Resource
   end
 
   meta do
-    { count: @object.count }
+    { count: Routine.count }
   end
 end

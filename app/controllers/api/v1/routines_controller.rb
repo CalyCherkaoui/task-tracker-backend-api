@@ -23,9 +23,9 @@ module Api
 
       # POST /categories, params
       def create
-        routine = routine.create(routine_params)
+        routine = Routine.create(routine_params)
         if routine.save
-          render_jsonapi_response(@routine)
+          render_jsonapi_response(routine)
         else
           render json: routine.errors,
                  status: :unprocessable_entity
