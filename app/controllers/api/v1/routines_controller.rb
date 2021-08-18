@@ -6,7 +6,7 @@ module Api
 
       # GET /routines/:id
       def show
-          render_jsonapi_response(@routine)
+        render_jsonapi_response(@routine)
       end
 
       # GET /routines
@@ -15,7 +15,6 @@ module Api
         render_jsonapi_response(@routines)
       end
 
-      
       # PUT /routines/:id
       def update
         @routine.update(routine_params)
