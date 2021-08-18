@@ -11,8 +11,7 @@ module Api
 
       # GET /routines
       def index
-        @routines = Routine.all
-        render_jsonapi_response(@routines)
+        render jsonapi: Routine.all
       end
 
       # PUT /routines/:id
