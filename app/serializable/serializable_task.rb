@@ -8,7 +8,7 @@ class SerializableTask < JSONAPI::Serializable::Resource
   end
 
   attribute :icon do
-    @object.routine.icon
+    @object.icon
   end
 
   attribute :creation_date do
@@ -33,6 +33,7 @@ class SerializableTask < JSONAPI::Serializable::Resource
     meta do
       {
         routine: @object.routine.name,
+        routine_id: @object.routine.id
       }
     end
   end
@@ -42,6 +43,6 @@ class SerializableTask < JSONAPI::Serializable::Resource
   end
 
   meta do
-    { count: Task.count }
+    { count: Task.user.count }
   end
 end
