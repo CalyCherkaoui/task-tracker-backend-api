@@ -34,7 +34,13 @@ class SerializableTask < JSONAPI::Serializable::Resource
     end
 
     link :related do
-      "/api/v1/routine/#{@object.routine.id}"
+      "/api/v1/routines/#{@object.routine.id}"
+    end
+  end
+
+  has_many :mesurements do
+    data do
+      @object.mesurements
     end
   end
 

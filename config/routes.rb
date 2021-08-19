@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :users, only: %w[show]
       resources :routines, only: %i[index show create update destroy]
       resources :tasks, only: %i[index show create update destroy]
+      resources :mesurements, only: %i[create destroy]
     end
   end
 

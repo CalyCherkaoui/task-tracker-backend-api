@@ -24,7 +24,7 @@ module Api
         head :no_content
       end
 
-      # POST /categories, params
+      # POST /tasks, params
       def create
         task = current_user.tasks.create(task_params)
         if task.save
@@ -39,7 +39,7 @@ module Api
         end
       end
 
-      # DELETE /Categories/:id
+      # DELETE /tasks/:id
       def destroy
         @task.destroy
         head :no_content

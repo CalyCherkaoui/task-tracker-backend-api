@@ -6,7 +6,9 @@ module Api
 
       # GET /routines/:id
       def show
-        render_jsonapi_response(@routine)
+        # render_jsonapi_response(@routine)
+        render jsonapi: @routine, include: :tasks,
+               status: 200
       end
 
       # GET /routines
@@ -20,7 +22,7 @@ module Api
         head :no_content
       end
 
-      # POST /categories, params
+      # POST /routines, params
       def create
         routine = Routine.create(routine_params)
         if routine.save
@@ -31,7 +33,7 @@ module Api
         end
       end
 
-      # DELETE /Categories/:id
+      # DELETE /routines/:id
       def destroy
         @routine.destroy
         head :no_content
