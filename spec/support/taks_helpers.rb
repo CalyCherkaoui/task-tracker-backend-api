@@ -2,7 +2,6 @@ require 'faker'
 require 'factory_bot_rails'
 
 module TaskHelpers
-
   def create_task(user, routine)
     FactoryBot.create(
       :task,

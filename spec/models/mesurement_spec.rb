@@ -6,7 +6,6 @@ RSpec.describe Mesurement, type: :model do
   let(:task) { create_task(user, routine) }
   let(:mesurement) { create_mesurement(task) }
 
-
   it 'is valid with valid attributes' do
     expect(mesurement).to be_valid
   end
