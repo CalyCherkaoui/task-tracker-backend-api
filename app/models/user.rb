@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          jwt_revocation_strategy: JwtDenylist
 
+  validates :username, presence: true, length: { minimum: 2 }
+
   has_many :tasks
 
   def sorted_tasks
