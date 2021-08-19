@@ -38,6 +38,12 @@ class SerializableTask < JSONAPI::Serializable::Resource
     end
   end
 
+  has_many :mesurements do
+    data do
+      @object.mesurements
+    end
+  end
+
   link :self do
     @url_helpers.api_v1_task_path(@object.id)
   end

@@ -16,7 +16,7 @@ class SerializableMesurement < JSONAPI::Serializable::Resource
     end
 
     link :related do
-      "/api/v1/tasks/#{@object.task.id}"
+      "/api/v1/mesurements/#{@object.task.id}"
     end
   end
 
