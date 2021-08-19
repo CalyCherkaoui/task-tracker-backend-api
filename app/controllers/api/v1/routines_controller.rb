@@ -20,7 +20,7 @@ module Api
         head :no_content
       end
 
-      # POST /categories, params
+      # POST /routines, params
       def create
         routine = Routine.create(routine_params)
         if routine.save
@@ -31,7 +31,7 @@ module Api
         end
       end
 
-      # DELETE /Categories/:id
+      # DELETE /routines/:id
       def destroy
         @routine.destroy
         head :no_content

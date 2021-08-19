@@ -1,10 +1,10 @@
 module Api
   module V1
-    class mesurementsController < ApplicationController
+    class MesurementsController < ApplicationController
       before_action :authenticate_user!
       before_action :set_mesurement, only: :destroy
 
-      # POST /categories, params
+      # POST / mesurements, params
       def create
         mesurement = mesurement.create(mesurement_params)
         if mesurement.save
@@ -16,7 +16,7 @@ module Api
         end
       end
 
-      # DELETE /Categories/:id
+      # DELETE / mesurements/:id
       def destroy
         @mesurement.destroy
         head :no_content
