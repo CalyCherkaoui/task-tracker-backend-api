@@ -5,8 +5,6 @@ RSpec.describe Task, type: :model do
   let(:routine) { create_routine }
   let(:task) { create_task(user, routine) }
 
-  # let(:task) {FactoryBot.create(:task)}
-
   it 'is valid with valid attributes' do
     expect(task).to be_valid
   end
