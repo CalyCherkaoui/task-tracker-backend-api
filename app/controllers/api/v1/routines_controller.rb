@@ -6,7 +6,9 @@ module Api
 
       # GET /routines/:id
       def show
-        render_jsonapi_response(@routine)
+        # render_jsonapi_response(@routine)
+        render jsonapi: @routine, include: :tasks,
+               status: 200
       end
 
       # GET /routines
