@@ -9,7 +9,7 @@ module TaskHelpers
       icon: Faker::Lorem.words,
       priority: Faker::Number.between(from: 1, to: 9),
       goal: Faker::Number.number(digits: 3),
-      unit: Faker::Lorem.characters(number: 2),
+      unit: Faker::Lorem.characters(number: 2)
     )
   end
 
@@ -18,7 +18,7 @@ module TaskHelpers
       :task,
       name: Faker::Lorem.words,
       icon: Faker::Lorem.words,
-      priority: Faker::Number.between(from: 1, to: 9),
+      priority: Faker::Number.between(from: 1, to: 9)
     )
   end
 end

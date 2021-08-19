@@ -12,7 +12,7 @@ module MesurementHelpers
   def build_mesurement
     FactoryBot.build(
       :mesurement,
-      quantity: Faker::Number.number(digits: 3),
+      quantity: Faker::Number.number(digits: 3)
     )
   end
 end
