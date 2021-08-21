@@ -7,10 +7,6 @@ module Api
 
       def show
         if current_user.id == @user.id
-          # render json: { message: 'Welcome to your profile',
-          #                 username: @user.username,
-          #                 currentuser: current_user.username }
-          # render_jsonapi_response(current_user)
           render jsonapi: current_user, include: :tasks,
                  status: 200
         else
