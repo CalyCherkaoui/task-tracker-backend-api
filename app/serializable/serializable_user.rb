@@ -37,6 +37,6 @@ class SerializableUser < JSONAPI::Serializable::Resource
   end
 
   meta do
-    { admin: false }
+    { admin: @object.admin }
   end
 end
