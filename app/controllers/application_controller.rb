@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
 
@@ -45,5 +47,11 @@ class ApplicationController < ActionController::API
         }
       ]
     }, status: 400
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
   end
 end

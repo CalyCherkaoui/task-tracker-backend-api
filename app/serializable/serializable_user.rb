@@ -4,7 +4,7 @@ class SerializableUser < JSONAPI::Serializable::Resource
 
   type 'users'
 
-  attributes :email, :id, :username
+  attributes :email, :username, :id
 
   attribute :date do
     @object.created_at
