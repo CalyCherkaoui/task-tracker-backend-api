@@ -40,7 +40,10 @@ module TaskTrackerBackendApi
         # resource '*',
         #   headers: :any,
         #   methods: %i[get patch put delete post options head]
-        resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options, :head], expose: ['Authorization']
+        resource '*', 
+          :headers => :any,
+          :methods => [:get, :post, :put, :patch, :delete, :options, :head], 
+          expose: ['Authorization', 'Uid']
       end
     end
   end
