@@ -11,14 +11,8 @@ class Users::SessionsController < Devise::SessionsController
 
   def log_out_success
     render json: {
-      success: [
-        {
-          message: 'Sayonara! You are logged out. See you soon!',
-          status: '200',
-          title: 'Logout_success'
-        }
-      ]
+      message: 'Sayonara! You are logged out. See you soon!',
+      title: 'Logout_success'
     }, status: 200
   end
-
 end
