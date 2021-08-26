@@ -10,8 +10,8 @@ class SerializableTask < JSONAPI::Serializable::Resource
     @object.routine.name
   end
 
-  attribute :author do
-    @object.user.username
+  attribute :author_id do
+    @object.user.id
   end
 
   attribute :icon do
@@ -22,19 +22,23 @@ class SerializableTask < JSONAPI::Serializable::Resource
     @object.created_at
   end
 
+  attribute :measurements_count do
+    @object.measurements_count
+  end
+
+  attribute :measurements_total do
+    @object.measurements_total
+  end
+
   belongs_to :user do
-    link :related do
-      "/api/v1/users/#{@object.user.id}"
+    data do
+      @object.user
     end
   end
 
   belongs_to :routine do
     data do
       @object.routine
-    end
-
-    link :related do
-      "/api/v1/routines/#{@object.routine.id}"
     end
   end
 
@@ -44,7 +48,7 @@ class SerializableTask < JSONAPI::Serializable::Resource
     end
   end
 
-  link :self do
-    @url_helpers.api_v1_task_path(@object.id)
+  meta do
+    { routine: @object.routine }
   end
 end
