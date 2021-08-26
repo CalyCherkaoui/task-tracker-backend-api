@@ -8,7 +8,7 @@ module Api
       def create
         mesurement = mesurement.create(mesurement_params)
         if mesurement.save
-          render jsonapi: mesurement, include: :tasks,
+          render jsonapi: mesurement,
                  status: 200
         else
           render json: mesurement.errors,

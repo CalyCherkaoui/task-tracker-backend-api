@@ -10,17 +10,26 @@ class SerializableMesurement < JSONAPI::Serializable::Resource
     @object.created_at
   end
 
+  attribute :task_id do
+    @object.task.id
+  end
+
+  attribute :task_name do
+    @object.task.name
+  end
+
+  attribute :task_icon do
+    @object.task.icon
+  end
+
+  attribute :unity do
+    @object.task.unity
+  end
+
   belongs_to :task do
     data do
       @object.task
     end
-
-    link :related do
-      "/api/v1/mesurements/#{@object.task.id}"
-    end
   end
 
-  link :self do
-    @url_helpers.api_v1_mesurement_path(@object.id)
-  end
 end
