@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :routines, only: %i[index show create update destroy]
       resources :tasks, only: %i[index show create update destroy]
       resources :mesurements, only: %i[create destroy]
+      get 'routines/allroutines', to: 'routines#allroutines'
     end
   end
 

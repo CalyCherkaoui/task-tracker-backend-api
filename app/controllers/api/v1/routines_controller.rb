@@ -3,7 +3,7 @@ module Api
     class RoutinesController < ApplicationController
       before_action :authenticate_user!
       before_action :set_routine, only: %w[show destroy update]
-      before_action :set_routines, only: %w[index]
+      before_action :set_routines, only: %w[index, allroutines]
 
       # GET /routines/:id
       def show
@@ -23,6 +23,11 @@ module Api
           render jsonapi: routines,
                  status: 200
         end
+      end
+
+      # GET /routines/allroutines
+      def allroutines
+        render json: RoutinesRepresenter.new(@routines).as_json, status: 200
       end
 
       # PUT /routines/:id
