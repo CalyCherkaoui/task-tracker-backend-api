@@ -25,11 +25,6 @@ module Api
         end
       end
 
-      # GET /routines/allroutines
-      def allroutines
-        render json: RoutinesRepresenter.new(@routines).as_json, status: 200
-      end
-
       # PUT /routines/:id
       def update
         @routine.update(routine_params)
