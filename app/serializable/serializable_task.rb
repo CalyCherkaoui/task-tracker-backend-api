@@ -10,6 +10,10 @@ class SerializableTask < JSONAPI::Serializable::Resource
     @object.routine.name
   end
 
+  attribute :routine_id do
+    @object.routine.id
+  end
+
   attribute :author_id do
     @object.user.id
   end
