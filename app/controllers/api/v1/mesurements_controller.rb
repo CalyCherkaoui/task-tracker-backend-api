@@ -6,7 +6,7 @@ module Api
 
       # POST / mesurements, params
       def create
-        mesurement = mesurement.create(mesurement_params)
+        mesurement = Mesurement.create(mesurement_params)
         if mesurement.save
           render jsonapi: mesurement,
                  status: 200
