@@ -16,7 +16,7 @@ class Task < ApplicationRecord
   def measurements_total
     sum = 0
     mesurements.each do |measure|
-      sum += measure
+      sum += measure.quantity
     end
     sum
   end
