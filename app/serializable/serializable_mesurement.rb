@@ -23,7 +23,7 @@ class SerializableMesurement < JSONAPI::Serializable::Resource
   end
 
   attribute :unity do
-    @object.task.unity
+    @object.task.unit
   end
 
   belongs_to :task do
