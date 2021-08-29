@@ -4,7 +4,7 @@ module Api
       before_action :authenticate_user!
       before_action :set_routines, only: %w[index]
 
-      # GET /routines/allroutines
+      # GET /allroutines
       def index
         render json: RoutinesRepresenter.new(@routines).as_json, status: 200
       end
