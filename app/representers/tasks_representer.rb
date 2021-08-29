@@ -4,11 +4,10 @@ class TasksRepresenter
   end
 
   def as_json
-    tasks.map do |tasks|
+    tasks.map do |task|
       {
-        id: tasks.id,
-        name: tasks.name,
-        icon: tasks.icon,
+        id: task.id,
+        name: task.name,
       }
     end
   end

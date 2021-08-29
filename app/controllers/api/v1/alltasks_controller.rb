@@ -6,13 +6,13 @@ module Api
 
       # GET /alltasks
       def index
-        render json: tasksRepresenter.new(@tasks).as_json, status: 200
+        render json: TasksRepresenter.new(@tasks).as_json, status: 200
       end
 
       private
 
       def set_tasks
-        @tasks = current_user.priority_sorted
+        @tasks = current_user.sorted_tasks
       end
 
     end
