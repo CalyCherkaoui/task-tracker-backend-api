@@ -4,7 +4,7 @@ class SerializableRoutine < JSONAPI::Serializable::Resource
 
   type 'routines'
 
-  attributes :id, :name, :icon, :priority
+  attributes :id, :name, :icon, :priority, :created_at
 
   has_many :tasks do
     data do
@@ -12,9 +12,9 @@ class SerializableRoutine < JSONAPI::Serializable::Resource
     end
   end
 
-  attribute :date do
-    @object.created_at
-  end
+  # attribute :date do
+  #   @object.created_at
+  # end
 
   meta do
     { count: Routine.count }

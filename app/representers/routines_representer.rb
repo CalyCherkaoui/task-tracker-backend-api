@@ -8,7 +8,7 @@ class RoutinesRepresenter
       {
         id: routine.id,
         name: routine.name,
-        icon: routine.icon,
+        icon: routine.icon
       }
     end
   end

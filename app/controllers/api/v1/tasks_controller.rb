@@ -8,7 +8,7 @@ module Api
       def show
         # render_jsonapi_response(@task)
         render jsonapi: @task, include: :mesurements,
-               fields: { mesurements: [:id, :quantity, :created_at]},
+               fields: { mesurements: %i[id quantity created_at] },
                status: 200
       end
 

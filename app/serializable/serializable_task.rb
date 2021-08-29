@@ -4,7 +4,7 @@ class SerializableTask < JSONAPI::Serializable::Resource
 
   type 'tasks'
 
-  attributes :id, :name, :priority, :goal, :unit
+  attributes :id, :name, :priority, :goal, :unit, :created_at
 
   attribute :routine do
     @object.routine.name
@@ -22,9 +22,9 @@ class SerializableTask < JSONAPI::Serializable::Resource
     @object.icon
   end
 
-  attribute :creation_date do
-    @object.created_at
-  end
+  # attribute :creation_date do
+  #   @object.created_at
+  # end
 
   attribute :measurements_count do
     @object.measurements_count

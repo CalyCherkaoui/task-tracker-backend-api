@@ -4,11 +4,11 @@ class SerializableMesurement < JSONAPI::Serializable::Resource
 
   type 'Mesurements'
 
-  attributes :id, :quantity
+  attributes :id, :quantity, :created_at
 
-  attribute :creation_date do
-    @object.created_at
-  end
+  # attribute :creation_date do
+  #   @object.created_at
+  # end
 
   attribute :task_id do
     @object.task.id
@@ -31,5 +31,4 @@ class SerializableMesurement < JSONAPI::Serializable::Resource
       @object.task
     end
   end
-
 end

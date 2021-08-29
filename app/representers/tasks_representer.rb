@@ -7,7 +7,7 @@ class TasksRepresenter
     tasks.map do |task|
       {
         id: task.id,
-        name: task.name,
+        name: task.name
       }
     end
   end

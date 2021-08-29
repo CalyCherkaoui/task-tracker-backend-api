@@ -3,7 +3,7 @@ module Api
     class RoutinesController < ApplicationController
       before_action :authenticate_user!
       before_action :set_routine, only: %w[show destroy update]
-      before_action :set_routines, only: %w[index, allroutines]
+      before_action :set_routines, only: %w[index allroutines]
 
       # GET /routines/:id
       def show

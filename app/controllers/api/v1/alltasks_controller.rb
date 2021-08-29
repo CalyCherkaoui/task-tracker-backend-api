@@ -14,7 +14,6 @@ module Api
       def set_tasks
         @tasks = current_user.sorted_tasks
       end
-
     end
   end
 end

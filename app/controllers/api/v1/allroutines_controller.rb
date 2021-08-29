@@ -14,7 +14,6 @@ module Api
       def set_routines
         @routines = Routine.priority_sorted
       end
-
     end
   end
 end

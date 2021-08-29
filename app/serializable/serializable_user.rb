@@ -4,11 +4,11 @@ class SerializableUser < JSONAPI::Serializable::Resource
 
   type 'users'
 
-  attributes :email, :username, :id
+  attributes :email, :username, :id, :created_at
 
-  attribute :date do
-    @object.created_at
-  end
+  # attribute :date do
+  #   @object.created_at
+  # end
 
   has_many :tasks do
     data do
