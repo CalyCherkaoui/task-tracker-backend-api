@@ -35,17 +35,14 @@ module Api
 
       # POST /routines, params
       def create
-        if current_user.admin
-          routine = Routine.create(routine_params)
-        end
+        routine = Routine.create(routine_params) if current_user.admin
 
         if routine.save
           render_jsonapi_response(routine)
         else
           render json: routine.errors,
-                  status: :unprocessable_entity
+                 status: :unprocessable_entity
         end
-
       end
 
       # DELETE /routines/:id
