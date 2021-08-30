@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+
+  rescue_from CanCan::AccessDenied, with: :access_denied
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
 
@@ -10,6 +12,18 @@ class ApplicationController < ActionController::API
     else
       render jsonapi_errors: resource.errors, status: 400
     end
+  end
+
+  def access_denied
+    render json: {
+      errors: [
+        {
+          message: 'Access denied! Please login as Admin',
+          title: 'Not_authorised_user',
+          status: 401
+        }
+      ]
+    }, status: 404
   end
 
   def not_found
@@ -29,7 +43,7 @@ class ApplicationController < ActionController::API
       errors:
         [
           {
-            message: 'Oops! Admin only! Sorry! You are not authorized!',
+            message: 'Oops! You are not authorized!',
             title: 'Not_authorised_user',
             status: 401
           }
