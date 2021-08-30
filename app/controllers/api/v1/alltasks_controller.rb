@@ -3,6 +3,7 @@ module Api
     class AlltasksController < ApplicationController
       before_action :authenticate_user!
       before_action :set_tasks, only: %w[index]
+      authorize_resource
 
       # GET /alltasks
       def index

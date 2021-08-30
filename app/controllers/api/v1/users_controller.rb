@@ -4,6 +4,7 @@ module Api
       before_action :authenticate_user!
       before_action :set_user, only: %w[show]
       deserializable_resource :users, only: [:show]
+      authorize_resource
 
       def show
         if current_user.id == @user.id

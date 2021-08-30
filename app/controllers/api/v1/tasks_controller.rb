@@ -3,6 +3,7 @@ module Api
     class TasksController < ApplicationController
       before_action :authenticate_user!
       before_action :set_task, only: %w[show destroy update]
+      authorize_resource
 
       # GET /tasks/:id
       def show

@@ -3,6 +3,7 @@ module Api
     class MesurementsController < ApplicationController
       before_action :authenticate_user!
       before_action :set_mesurement, only: :destroy
+      authorize_resource
 
       # POST / mesurements, params
       def create

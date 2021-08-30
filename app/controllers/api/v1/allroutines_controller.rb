@@ -3,6 +3,7 @@ module Api
     class AllroutinesController < ApplicationController
       before_action :authenticate_user!
       before_action :set_routines, only: %w[index]
+      authorize_resource
 
       # GET /allroutines
       def index
