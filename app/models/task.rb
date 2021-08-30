@@ -7,9 +7,21 @@ class Task < ApplicationRecord
   validates :unit, :goal, presence: true
   validates :priority, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
-  scope :priority_sorted, -> { order(priority: :asc).includes(:routine) }
+  scope :priority_sorted, -> { order(priority: :asc) }
 
   def icon
     routine.icon
+  end
+
+  def measurements_total
+    sum = 0
+    mesurements.each do |measure|
+      sum += measure.quantity
+    end
+    sum
+  end
+
+  def measurements_count
+    mesurements.count
   end
 end

@@ -4,25 +4,17 @@ class SerializableRoutine < JSONAPI::Serializable::Resource
 
   type 'routines'
 
-  attributes :id, :name, :icon, :priority
-
-  attribute :tasks_count do
-    @object.tasks_count
-  end
+  attributes :id, :name, :icon, :priority, :created_at
 
   has_many :tasks do
     data do
-      @object.ordered_tasks
-    end
-
-    hero_task do
-      @object.hero_task
+      @object.tasks
     end
   end
 
-  link :self do
-    @url_helpers.api_v1_routine_path(@object.id)
-  end
+  # attribute :date do
+  #   @object.created_at
+  # end
 
   meta do
     { count: Routine.count }

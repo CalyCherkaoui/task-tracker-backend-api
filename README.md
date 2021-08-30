@@ -223,7 +223,7 @@ Run Rails server:
 ```
 $ rails s
 ```
-In the browser, open ``http://localhost:3000``
+In the browser, open ``http://localhost:3001``
 
 ### Prerequisites and useful Command Line Tools:
 

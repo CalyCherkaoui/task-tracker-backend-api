@@ -3,15 +3,24 @@ class Routine < ApplicationRecord
   validates :priority, presence: true, numericality: { only_integer: true, greater_than: 0 }
   has_many :tasks, dependent: :destroy
 
-  def ordered_tasks
-    tasks.ordered
+  scope :priority_sorted, -> { order(priority: :asc) }
+
+  def hero_task(id)
+    tasks = User.find(id).tasks.where(routine_id: self.id)
+    if tasks
+      tasks.priority_sorted.first
+    else
+      []
+    end
   end
 
-  def hero_task
-    tasks.ordered.first
+  def user_tasks(id)
+    tasks = User.find(id).tasks.where(routine_id: self.id)
+    tasks.priority_sorted
   end
 
-  def tasks_count
+  def tasks_count(id)
+    tasks = User.find(id).tasks.where(routine_id: self.id)
     tasks.count
   end
 end
