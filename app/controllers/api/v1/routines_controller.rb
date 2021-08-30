@@ -3,13 +3,11 @@ module Api
     class RoutinesController < ApplicationController
       before_action :authenticate_user!
       before_action :set_routine, only: %w[show destroy update]
-      before_action :set_routines, only: %w[index allroutines]
+      before_action :set_routines, only: %w[index]
 
       # GET /routines/:id
       def show
         tasks = @routine.user_tasks(current_user.id)
-        # render_jsonapi_response(@routine)
-
         render jsonapi: tasks,
                status: 200
       end
@@ -27,19 +25,27 @@ module Api
 
       # PUT /routines/:id
       def update
-        @routine.update(routine_params)
-        head :no_content
+        if current_user.admin
+          @routine.update(routine_params)
+          head :no_content
+        else
+          head :unauthorized
+        end
       end
 
       # POST /routines, params
       def create
-        routine = Routine.create(routine_params)
+        if current_user.admin
+          routine = Routine.create(routine_params)
+        end
+
         if routine.save
           render_jsonapi_response(routine)
         else
           render json: routine.errors,
-                 status: :unprocessable_entity
+                  status: :unprocessable_entity
         end
+
       end
 
       # DELETE /routines/:id
