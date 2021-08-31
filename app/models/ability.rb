@@ -18,8 +18,8 @@ class Ability
       return unless user.present?
       can :manage, Mesurement, user: user
       can :manage, Task, user: user
-      can :manage, :alltasks
-      can :manage, :allroutines
+      can :read, Routine
+      # can :read, User, user: user
 
       return unless user.admin?
       if user.admin?
