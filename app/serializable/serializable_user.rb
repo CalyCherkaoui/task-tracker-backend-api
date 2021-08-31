@@ -4,21 +4,17 @@ class SerializableUser < JSONAPI::Serializable::Resource
 
   type 'users'
 
-  attributes :email, :username, :id, :created_at
-
-  # attribute :date do
-  #   @object.created_at
-  # end
+  attributes :email, :username, :id
 
   has_many :tasks do
     data do
-      @object.tasks.priority_sorted
+      @object.hero_task
     end
   end
 
-  link :self do
-    @url_helpers.api_v1_user_path(@object.id)
-  end
+  # link :self do
+  #   @url_helpers.api_v1_user_path(@object.id)
+  # end
 
   meta do
     { admin: @object.admin }
