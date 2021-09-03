@@ -13,4 +13,8 @@ class User < ApplicationRecord
   def sorted_tasks
     tasks.priority_sorted
   end
+
+  def hero_task
+    tasks.priority_sorted.first
+  end
 end
