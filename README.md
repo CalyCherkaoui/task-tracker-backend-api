@@ -293,7 +293,6 @@ $  bundle exec rpsec
 
 ### Request tests series:
 
-Users
 <br>
 <img width="700px" height="auto" src="./public/screenshots/request-test1.png">
 <br>
