@@ -16,7 +16,7 @@ This project was built following the specifications and user stories given here:
 - [API Endpoints](#api-endpoints)
 - [Link to the deployed API](#link-to-the-deployed-api)
 - [Walkthrough Video presentation](#walkthrough-video-presentation)
-- [Screenshots](#screenshots)
+- [Front-end side](#front-end-side)
 - [Dependencies](#dependencies)
 - [Linting tools](#linting-tools)
 - [Getting started](#getting-started-in-development)
@@ -27,7 +27,11 @@ This project was built following the specifications and user stories given here:
 - [License](#license)
 
 ## API documentation
-Documentation
+[Full documentaion for this API here!](https://documenter.getpostman.com/view/16917110/U16ewTvn)
+
+<br>
+<img width="800px" src="./public/screenshots/documentation.png">
+<br>
 
 ## API Endpoints
 This API provides the following Endpoints:
@@ -37,36 +41,60 @@ This API provides the following Endpoints:
     <th>Description</th>
   </tr>
   <tr>
-    <td>POST/register</td>
+    <td>POST /api/v1/signup</td>
     <td>Signup of a new user</td>
   </tr>
   <tr>
-    <td>POST/login</td>
-    <td>Login of an existing user</td>
+    <td>POST /api/v1/login</td>
+    <td>Login a registred user</td>
   </tr>
   <tr>
-    <td>GET/gategories</td>
-    <td>List of all categories</td>
+    <td>DELETE /api/v1/logout</td>
+    <td>Logout a logged in user</td>
   </tr>
   <tr>
-    <td>GET/tasks</td>
+    <td>GET /api/v1/users/:id</td>
+    <td>Get a user profile</td>
+  </tr>
+  <tr>
+    <td>POST /api/v1/routines</td>
+    <td>Greate a new routine</td>
+  </tr>
+  <tr>
+    <td>GET /api/v1/routines/:id</td>
+    <td>Get a routine's details</td>
+  </tr>
+  <tr>
+    <td>GET /api/v1/allroutines</td>
+    <td>Get all routines names to be selected for the creation of a task</td>
+  </tr>
+  <tr>
+    <td>DELETE /api/v1/routines/:id</td>
+    <td>Destroy a routine</td>
+  </tr>
+  <tr>
+    <td>GET api/v1/tasks</td>
     <td>List of all user's tasks</td>
   </tr>
   <tr>
-    <td>POST/tasks</td>
-    <td>Creates new task</td>
+    <td>POST /api/v1/tasks</td>
+    <td>Create new task</td>
   </tr>
   <tr>
-    <td>GET/tasks/:id</td>
+    <td>GET /api/v1/tasks/:id</td>
     <td>Provides task details</td>
   </tr>
   <tr>
-    <td>PUT/tasks/id</td>
-    <td>Updates task</td>
+    <td>DELETE /api/v1/tasks/:id</td>
+    <td>Destroy task</td>
   </tr>
   <tr>
-    <td>DELETE/tasks/id</td>
-    <td>Destroy task</td>
+    <td>GET /api/v1/alltasks</td>
+    <td>Get all tasks names to be selected for the creation of a measurement</td>
+  </tr>
+  <tr>
+    <td>POST /api/v1/mesurements</td>
+    <td>Create new mesurement</td>
   </tr>
 </table>
 
@@ -77,10 +105,10 @@ This API provides the following Endpoints:
 ## Walkthrough video presentation
 [Check here a video presentation of the project]()
 
-## Screenshots
-<br>
-<span><img width="380" src="./public/screenshots/coinsList.png"></span>&nbsp &nbsp<span><img width="380" src="./public/screenshots/About.png"></span><span><img width="380" src="./public/screenshots/coinDetail.png"></span>
-<br>
+## Front-end side
+
+- [Check the GitHub repository of the front-end side of the project here!](https://github.com/CalyCherkaoui/task-track-front-end)
+- [Check the deployed version of the front-end side of the project here!](https://github.com/CalyCherkaoui/task-track-front-end)
 
 ## Dependencies
 The main dependencies used in this web application:
