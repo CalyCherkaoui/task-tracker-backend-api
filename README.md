@@ -123,7 +123,14 @@ The main dependencies used in this web application:
   </tr>
   <tr>
     <td>Rails</td>
-    <td></td>
+    <td>Ruby based server-side web application framework</td>
+    <td>⭐️</td>
+    <td>⭐️</td>
+    <td>⭐️</td>
+  </tr>
+  <tr>
+    <td>Postgresql</td>
+    <td>Database</td>
     <td>⭐️</td>
     <td>⭐️</td>
     <td>⭐️</td>
@@ -182,14 +189,27 @@ The main dependencies used in this web application:
     <td>Implementation of the RFC 7519 OAuth JSON Web Token standard</td>
     <td>⭐️</td>
     <td></td>
-    <td></td>
+    <td>⭐️</td>
   </tr>
   <tr>
     <td>rack-cors</td>
     <td>Support for Cross-Origin Resource Sharing for Rack compatible web apps</td>
     <td>⭐️</td>
     <td></td>
+    <td>⭐️</td>
+  </tr>
+  <tr>
+  <td>Jsonapi-rails</td>
+    <td>Rails helper for api resources serialization</td>
+    <td>⭐️</td>
+    <td>⭐️</td>
+    <td>⭐️</td>
+  </tr>
+  <td>Cancancan</td>
+    <td>Rails helper for authorisation management</td>
+    <td>⭐️</td>
     <td></td>
+    <td>⭐️</td>
   </tr>
 </table>
 
