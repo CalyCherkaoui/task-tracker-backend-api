@@ -273,16 +273,6 @@ $ rails s
 ```
 In the browser, open ``http://localhost:3001``
 
-### Prerequisites and useful Command Line Tools:
-
-Ruby: 2.6.6
-Rails: 6.0.4
-
-Run your Postgresql service in your terminal:
-
-```
-$ sudo service postgresql restart
-```
 
 To lint Ruby code:
 ```
@@ -298,14 +288,14 @@ $  bundle exec rpsec
 ### Unit tests series:
 
 <br>
-<img width="600px" src="./screenshots/test_models.png">
+<img width="700px" height="auto" src="./public/screenshots/unit-test1.png">
 <br>
 
 ### Request tests series:
 
 Users
 <br>
-<img width="600px" height="auto" src="./screenshots/test_users_request.png">
+<img width="700px" height="auto" src="./public/screenshots/request-test1.png">
 <br>
 
 ## Author
