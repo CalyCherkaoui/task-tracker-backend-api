@@ -12,10 +12,6 @@ class SerializableRoutine < JSONAPI::Serializable::Resource
     end
   end
 
-  # attribute :date do
-  #   @object.created_at
-  # end
-
   meta do
     { count: Routine.count }
   end

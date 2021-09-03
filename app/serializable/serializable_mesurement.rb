@@ -6,10 +6,6 @@ class SerializableMesurement < JSONAPI::Serializable::Resource
 
   attributes :id, :quantity, :created_at
 
-  # attribute :creation_date do
-  #   @object.created_at
-  # end
-
   attribute :task_id do
     @object.task.id
   end

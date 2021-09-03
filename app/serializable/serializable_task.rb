@@ -22,10 +22,6 @@ class SerializableTask < JSONAPI::Serializable::Resource
     @object.icon
   end
 
-  # attribute :creation_date do
-  #   @object.created_at
-  # end
-
   attribute :measurements_count do
     @object.measurements_count
   end

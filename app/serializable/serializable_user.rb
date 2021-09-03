@@ -12,10 +12,6 @@ class SerializableUser < JSONAPI::Serializable::Resource
     end
   end
 
-  # link :self do
-  #   @url_helpers.api_v1_user_path(@object.id)
-  # end
-
   meta do
     { admin: @object.admin }
   end
