@@ -1,30 +1,27 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
     # Define abilities for the passed in user here. For example:
-    #
-      user ||= User.new # guest user (not logged in)
-      cannot %i[edit destroy create], Routine
-      cannot %i[edit destroy create], Mesurement
-      cannot %i[edit destroy create], Task
-      cannot :read, Task
-      cannot :read, Routine
-      cannot :read, Mesurement
-      cannot :manage, User
+    user ||= User.new # guest user (not logged in)
+    cannot %i[edit destroy create], Routine
+    cannot %i[edit destroy create], Mesurement
+    cannot %i[edit destroy create], Task
+    cannot :read, Task
+    cannot :read, Routine
+    cannot :read, Mesurement
+    cannot :manage, User
 
-      return unless user.present?
-      can :manage, Mesurement, user: user
-      can :manage, Task, user: user
-      can :read, Routine
-      # can :read, User, user: user
+    return unless user.present?
 
-      return unless user.admin?
-      if user.admin?
-        can :manage, :all
-      end
+    can :manage, Mesurement, user: user
+    can :manage, Task, user: user
+    can :read, Routine
+    # can :read, User, user: user
+
+    return unless user.admin?
+
+    can :manage, :all if user.admin?
 
     #
     # The first argument to `can` is the action you are giving the user
