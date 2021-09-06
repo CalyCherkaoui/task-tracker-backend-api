@@ -103,7 +103,7 @@ This API provides the following Endpoints:
 
 
 ## Link to the deployed API
-[Link to the deployed Api on Heroku]()
+[Link to the deployed Api on Heroku](https://task-n-track.herokuapp.com/)
 
 ## Walkthrough video presentation
 [Check here a video presentation of the project]()
@@ -314,6 +314,7 @@ Give a ⭐️ if you like this project!
 - Hat tip to [stackoverflow](https://stackoverflow.com) comunity.
 - Hat tip to [Microverse](https://www.microverse.org/) TSE for Code Review.
 - Hat tip to anyone whose code was used
+- [deployement tuto](https://mgleon08.github.io/blog/2018/07/22/deploying-rails-nuxt-jwt-to-production-with-heroku/)
 ## 📝 License
 All source code is available jointly under the MIT License.
 See [MIT licence](./LICENSE) for details.
