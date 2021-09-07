@@ -17,7 +17,8 @@ This project was built following the specifications and user stories given here:
 - [Built with](#built-with)
 - [API documentation](#api-documentation)
 - [API Endpoints](#api-endpoints)
-- [Link to the deployed API](#link-to-the-deployed-api)
+- [API URL](#api-url)
+- [Fullstack App live demo](#fullstack-app-live-demo)
 - [Front-end side](#front-end-side)
 - [Dependencies](#dependencies)
 - [Linting tools](#linting-tools)
@@ -101,14 +102,18 @@ This API provides the following Endpoints:
 </table>
 
 
-## Link to the deployed API
-[Link to the deployed Api on Heroku](https://task-n-track.herokuapp.com/)
+## API URL:
 
+https://task-n-track.herokuapp.com/
+
+## Fullstack App live demo
+
+[Check here the link to the deployed full-stack App ](https://stupefied-tereshkova-39efa6.netlify.app)
 
 ## Front-end side
 
 - [Check the GitHub repository of the front-end side of the project here!](https://github.com/CalyCherkaoui/task-track-front-end)
-- [Check the deployed version of the front-end side of the project here!](https://github.com/CalyCherkaoui/task-track-front-end)
+- [Check the deployed version of the front-end side of the project here!](https://stupefied-tereshkova-39efa6.netlify.app)
 
 ## Dependencies
 The main dependencies used in this web application:
