@@ -18,7 +18,6 @@ This project was built following the specifications and user stories given here:
 - [API documentation](#api-documentation)
 - [API Endpoints](#api-endpoints)
 - [Link to the deployed API](#link-to-the-deployed-api)
-- [Walkthrough Video presentation](#walkthrough-video-presentation)
 - [Front-end side](#front-end-side)
 - [Dependencies](#dependencies)
 - [Linting tools](#linting-tools)
@@ -105,8 +104,6 @@ This API provides the following Endpoints:
 ## Link to the deployed API
 [Link to the deployed Api on Heroku](https://task-n-track.herokuapp.com/)
 
-## Walkthrough video presentation
-[Check here a video presentation of the project]()
 
 ## Front-end side
 
