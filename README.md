@@ -61,7 +61,7 @@ This API provides the following Endpoints:
   </tr>
   <tr>
     <td>POST /api/v1/routines</td>
-    <td>Greate a new routine</td>
+    <td>Create a new routine</td>
   </tr>
   <tr>
     <td>GET /api/v1/routines/:id</td>
